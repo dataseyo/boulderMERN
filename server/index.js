@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors({credentials: true, origin: "http://localhost:3000"}))
 
 // mongo connection
-const CONNECTION_URL = "mongodb+srv://gaharaz:1890@cluster0.7rtn9.mongodb.net/?retryWrites=true&w=majority"
+const CONNECTION_URL = "mongodb+srv://<user>:<pass>@<cluster>/?retryWrites=true&w=majority"
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
     .catch((error) => console.log(error.message))
